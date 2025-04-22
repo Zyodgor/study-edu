@@ -1,24 +1,11 @@
-$Poppins: ("Medium", 500);
-
-@each $name, $weight in $Poppins {
-    @font-face {
-        font-family: "Poppins";
-        src: url('../Fonts/Poppins/Poppins-#{$name}.woff2') format('woff2'),
-             url('../Fonts/Poppins/Poppins-#{$name}.woff') format('woff'),
-             url('../Fonts/Poppins/Poppins-#{$name}.ttf') format('truetype');
-        font-weight: $weight;
-        font-display: swap;
-    }
-}
-
 $Mulish: ("Bold", 700), ("ExtraBold", 800), ("Regular", 400);
 
 @each $name, $weight in $Mulish {
     @font-face {
         font-family: "Mulish";
-        src: url('../Fonts/Mulish/Mulish-#{$name}.woff2') format('woff2'),
-             url('../Fonts/Mulish/Mulish-#{$name}.woff') format('woff'),
-             url('../Fonts/Mulish/Mulish-#{$name}.ttf') format('truetype');
+        src: url('../fonts/Mulish/Mulish-#{$name}.woff2') format('woff2'),
+             url('../fonts/Mulish/Mulish-#{$name}.woff') format('woff'),
+             url('../fonts/Mulish/Mulish-#{$name}.ttf') format('truetype');
         font-weight: $weight;
         font-display: swap;
     }
