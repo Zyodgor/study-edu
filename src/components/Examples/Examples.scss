@@ -1,0 +1,147 @@
+.examples{
+    padding: 50px 0;
+    background: #00000081;
+    &__title{
+        text-align: center;
+        font-size: 45px;
+        color: white;
+        line-height: 1.1;
+        text-transform: capitalize;
+        @include media(994){
+            font-size: 34px;
+        }
+        @include media(528){
+            font-size: 28px;
+        }
+        @include media(420){
+            font-size: 24px;
+        }
+    }
+    &__subtitle{
+        text-align: center;
+        max-width: 500px;
+        color: white;
+        margin: 20px auto 30px;
+        font-size: 22px;
+        padding: 0 15px;
+        @include media(800){
+            font-size: 20px;
+            margin: 10px auto 20px;
+        }
+        @include media(510){
+            font-size: 16px;
+            margin: 10px auto 20px;
+        }
+    }
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(4, 210px);
+        justify-items: center;
+        justify-content: center;
+        gap: 20px;
+        @include media(970){
+            grid-template-columns: repeat(3, 210px);
+        }
+        @include media(720){
+            height: 350px;
+            overflow: hidden;
+            transition: height 1s;
+            &.active{
+                height: max-content;
+            }
+        }
+        @include media(700){
+            grid-template-columns: repeat(2, 210px);
+            height: 710px;
+        }
+        @include media(480){
+            grid-template-columns: repeat(1, 210px);
+            height: 1080px;
+        }
+        &-more{
+            text-align: center;
+            width: max-content;
+            margin: 10px auto 0;
+            display: none;
+            align-items: center;
+            cursor: pointer;
+            @include media(720){
+                display: flex;
+            }
+            & span{
+                color: white;
+                font-size: 18px;
+            }
+            & img{
+                width: 20px;
+                transition: .3s;
+                &.active{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    &__card{
+        position: relative;
+        max-width: 220px;
+        background: rgba(32, 32, 32, 0.856);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        border-radius: 10px;
+        padding-bottom: 50px;
+        &-link{
+            position: absolute;
+            bottom: 10px;
+            color: black;
+            text-decoration: underline;
+            transition: .3s;
+            background: white;
+            border-radius: 12px;
+            padding: 5px 8px;
+            &:hover{
+                color: black;
+                background: orange;
+            }
+        }
+        &-img img{
+            // max-width: 120px;
+            height: 120px;
+        }
+        &-name{
+            color: white;
+            font-size: 18px;
+            line-height: 1.1;
+            margin: 8px 0 10px;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        &-txt{
+            text-align: center;
+            color: white;
+        }
+        // &:nth-of-type(2) &-img,
+        // &:nth-of-type(4) &-img,
+        // &:nth-of-type(4) &-img,
+        // &:nth-of-type(5) &-img{
+        //     background: white;
+        //     height: 120px;
+        //     width: 100%;
+        //     overflow: hidden;
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        // }
+        &-img{
+            background: white;
+            height: 120px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+    }
+}

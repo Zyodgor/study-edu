@@ -1,0 +1,24 @@
+.chat__form{
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0;
+    &-inp{
+        max-width: 100%;
+        width: 100%;
+        background-color: rgb(32, 32, 32);
+        padding: 10px 14px;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+    &-btn{
+        padding: 4px;
+        transition: .3s;
+        &:hover{
+            transform: rotate(-90deg);
+        }
+    }
+}

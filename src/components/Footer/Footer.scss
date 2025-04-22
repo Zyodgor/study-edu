@@ -1,0 +1,74 @@
+.footer{
+    background: black;
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 15px;
+        @include media(700){
+            padding: 20px 15px;
+        }
+        @include media(520){
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    &__logo{
+        font-size: 32px;
+        color: white;
+        line-height: 1.1;
+        font-weight: 700;
+        @include media(700){
+            font-size: 25px;
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @include media(700){
+            gap: 5px;
+        }
+        @include media(520){
+            align-items: center;
+        }
+    }
+    &__link{
+        color: white;
+        font-size: 18px;
+        line-height: 1.1;
+    }
+    &__rights{
+        text-align: center;
+        color: white;
+        background: rgb(22, 22, 22);
+        padding: 10px;
+    }
+    &__icons{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        & img{
+            width: 35px;
+        }
+    }
+    &__btn{
+        // background: linear-gradient(90deg,rgba(255, 153, 0, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(255, 153, 0, 1) 100%);
+        background: white;
+        color: black;
+        // font-size: 18px;
+        font-weight: 700;
+        padding: 10px 20px;
+        border-radius: 15px;
+        // animation: gradient 3s linear infinite;
+        animation: jump .5s linear infinite alternate;
+        // box-shadow: 2px 2px 3px 2px orange;
+    }
+}
+
+// @keyframes gradient {
+//     to{
+//         // filter: hue-rotate(360deg);
+//     }
+// }

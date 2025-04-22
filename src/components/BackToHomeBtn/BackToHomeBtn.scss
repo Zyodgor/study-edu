@@ -1,0 +1,39 @@
+.back-to-home{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 8px 15px;
+    transition: .3s;
+    & span:nth-of-type(1){
+        @include media(600){
+            display: none;
+        }
+    }
+    & span:nth-of-type(2){
+        display: none;
+        @include media(600){
+            display: block;
+        }
+    }
+    &:hover{
+        background: orange;
+    }
+    @include media(600){
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        top: 15px;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+    }
+    @include media(500){
+        width: 28px;
+        height: 28px;
+    }
+}

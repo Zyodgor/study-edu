@@ -1,0 +1,39 @@
+.scroll{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    // background: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%);
+    background: white;
+    filter: saturate(100%);
+    transition: .3s;
+    cursor: pointer;
+    padding: 5px;
+    &:hover{
+        box-shadow: 0px 4px 50px 0px #326CFF80;
+    }
+    &.active{
+        visibility: visible;
+        opacity: 1;
+        z-index: 20;
+    }
+    @include media(600){
+        width: 45px;
+        height: 45px;
+    }
+    @include media(500){
+        bottom: 10px;
+        right: 10px;
+        width: 38px;
+        height: 38px;
+    }
+}
+.scroll img{ 
+    width: 100%;
+    height: 100%;
+}

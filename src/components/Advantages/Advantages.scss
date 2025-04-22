@@ -1,0 +1,88 @@
+.advantages{
+    padding: 40px 0;
+    background: #00000081;
+    &__title{
+        text-align: center;
+        font-size: 45px;
+        color: white;
+        margin-bottom: 40px;
+        line-height: 1.1;
+        font-weight: 800;
+        @include media(994){
+            font-size: 34px;
+        }
+        @include media(528){
+            font-size: 28px;
+        }
+        @include media(420){
+            font-size: 24px;
+        }
+    }
+    &__items{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // gap: 30px;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+        border-top: 1px solid white;
+        padding: 22px 10px;
+        @include media(600){
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+        @include media(500){
+            gap: 10px;
+        }
+        @include media(330){
+            padding: 20px 5px;
+        }
+        &-title{
+            color: white;
+            font-size: 25px;
+            line-height: 1.1;
+            font-weight: 700;
+            text-transform: uppercase;
+            max-width: 550px;
+            @include media(1060){
+                font-size: 25px;
+            }
+            @include media(994){
+                font-size: 20px;
+            }
+            @include media(944){
+                width: 215px;
+            }
+            @include media(500){
+                font-size: 18px;
+            }
+        }
+        &-txt{
+            width: 500px;
+            color: white;
+            font-size: 20px;
+            line-height: 1.2;
+            & span{
+                color: red;
+            }
+            @include media(994){
+                font-size: 19px;
+            }
+            @include media(570){
+                width: 85%;
+            }
+            @include media(500){
+                font-size: 16px;
+            }
+        }
+    }
+    &__bottom{
+        text-align: center;
+        margin-top: 20px;
+    }
+}

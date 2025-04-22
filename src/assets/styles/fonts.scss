@@ -1,0 +1,19 @@
+$Poppins:("Medium",500);
+
+@each $name,$weight in $Poppins{
+    @font-face {
+        font-family: "Poppins";
+        src: url('../Fonts/Poppins/Poppins-#{$name}.ttf');
+        font-weight: $weight;
+    }
+}
+
+$Mulish:("Bold",700),("ExtraBold",800),("Regular",400);
+
+@each $name,$weight in $Mulish{
+    @font-face {
+        font-family: "Mulish";
+        src: url('../Fonts/Mulish/Mulish-#{$name}.ttf');
+        font-weight: $weight;
+    }
+}

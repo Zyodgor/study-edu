@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish";
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.container{
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+input,button{
+    border: none;
+    outline: none;
+    background: unset;
+}
+
+// :root{
+//     --dark: black;
+//     --light: white;
+//     --grey: #C2C2C2;
+//     --blue: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%);
+// }
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: black;
+}
+
+.bg{
+    background: #00000081;
+}
