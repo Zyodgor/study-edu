@@ -62,7 +62,7 @@ export default {
     
       try {
         const response = await axios.post("/api/openai", {
-          model: "gpt-3.5-turbo",
+          model: "gpt-4-turbo",
           messages: state.messages,
         });
     

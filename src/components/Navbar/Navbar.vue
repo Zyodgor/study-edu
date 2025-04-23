@@ -29,9 +29,7 @@
         </li>
         <!-- <li><a href="" class="nav__content-link">Исследования</a></li> -->
         <!-- <li><a href="" class="nav__content-link">Байланыс</a></li> -->
-        <router-link class="nav__content-chat" to="/chat-study-edu"
-          >Чатқа өтіңіз !</router-link
-        >
+        <router-link class="nav__content-chat" to="/chat-study-edu">Чатқа өтіңіз !</router-link >
       </ul>
       <div
         v-show="burger"
