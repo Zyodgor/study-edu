@@ -36,7 +36,7 @@ export default {
           ...state.messages.slice(-5)
         ];
 
-        const response = await axios.post("https://backend-for-study-edu-production.up.railway.app/", {
+        const response = await axios.post("https://backend-for-study-edu-production.up.railway.app/api/openai", {
           model: "gpt-4-turbo",
           messages: messagesForRequest,
           max_tokens: 2048,
