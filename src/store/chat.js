@@ -26,36 +26,6 @@ export default {
   },
 
   actions: {
-    // async sendMessage({ commit, state }, userInput) {
-    //   commit('ADD_MESSAGE', { role: "user", content: userInput });
-    //   commit('setLoading', true);
-
-    //   try {
-    //     const response = await axios.post(
-    //       "/api/openai",
-    //       {
-    //         model: "gpt-3.5-turbo",
-    //         messages: state.messages,
-    //       },
-    //       {
-    //         headers: {
-    //           Authorization: `Bearer ${openaiApiKey}`,
-    //         },
-    //       }
-    //     );
-
-    //     const reply = response.data.choices[0].message;
-    //     commit('ADD_MESSAGE', reply);
-    //   } catch (err) {
-    //     console.error("Ошибка:", err);
-    //     commit('ADD_MESSAGE', {
-    //       role: "assistant",
-    //       content: "Произошла ошибка. Попробуй позже.",
-    //     });
-    //   } finally {
-    //     commit('setLoading', false);
-    //   }
-    // },
     async sendMessage({ commit, state }, userInput) {
       commit('ADD_MESSAGE', { role: "user", content: userInput });
       commit('setLoading', true);
@@ -64,6 +34,8 @@ export default {
         const response = await axios.post("/api/openai", {
           model: "gpt-4-turbo",
           messages: state.messages,
+          max_tokens: 1000,
+          temperature: 0.7
         });
     
         const reply = response.data.choices[0].message;
