@@ -5,34 +5,40 @@
       Мұнда әртүрлі салаларда жұмыс істеуді айтарлықтай жеңілдететін ең танымал
       ЖИ құралдары тізімі берілген.
     </p>
-    <div class="container examples__cards" :class="{ active: moreAI }">
-      <div class="examples__card" v-for="(card, i) in cards" :key="i">
-        <div class="examples__card-img">
-          <img :src="card.img" alt="" />
+    <div
+      class="examples__card-group"
+      v-for="(group, index) in cardGroups"
+      :key="index"
+    >
+      <h3 class="examples__group-title">{{ group.title }}</h3>
+      <div class="examples__cards">
+        <div class="examples__card" v-for="(card, i) in group.cards" :key="i">
+          <div class="examples__card-img">
+            <img :src="card.img" alt="" />
+          </div>
+          <a target="_blank" :href="card.url" class="examples__card-name">
+            {{ card.name }}
+          </a>
+          <p class="examples__card-txt">{{ card.description }}</p>
+          <button
+            class="examples__card-link"
+            @click.prevent="openModal(card.video)"
+          >
+            Бейнешолу
+          </button>
         </div>
-        <a target="_blank" :href="card.url" class="examples__card-name">{{
-          card.name
-        }}</a>
-        <p class="examples__card-txt">
-          {{ card.description }}
-        </p>
-        <button
-          class="examples__card-link"
-          @click.prevent="openModal(card.video)"
-        >
-          Бейнешолу
-        </button>
       </div>
     </div>
+
     <ExampleModal
       :video-url="modalVideoUrl"
       :is-open="isModalOpen"
       @close="closeModal"
     />
-    <div class="examples__cards-more" @click="moreAI = !moreAI">
+    <!-- <div class="examples__cards-more" @click="moreAI = !moreAI">
       <span>{{ moreAI ? "Жабу" : "Тағы" }}</span>
       <img src="@/assets/images/down.png" alt="" :class="{ active: moreAI }" />
-    </div>
+    </div> -->
     <a href="https://studyedu.kz/" target="_blank" class="examples__link"
       >ЖИ көмегімен жасалған сабаққа арналған сайт</a
     >
@@ -70,6 +76,8 @@ function closeModal() {
   modalVideoUrl.value = "";
 }
 
+
+
 const cards = [
   {
     img: edcafeImg,
@@ -96,6 +104,14 @@ const cards = [
     video: "https://www.youtube.com/embed/VWNF0U4c6ok",
   },
   {
+    img: canvaImg,
+    url: "https://www.canva.com/",
+    name: "Canva",
+    description:
+      "Canva — графикалық дизайн жасауға арналған онлайн-платформа, түрлі шаблондар мен құралдарды ұсынады.",
+    video: "https://www.youtube.com/embed/FHNt7hdOzsk",
+  },
+  {
     img: presentationsaiImg,
     url: "https://www.presentations.ai/",
     name: "Presentations.AI",
@@ -119,14 +135,7 @@ const cards = [
       "SlideSpeak — жасанды интеллект көмегімен мәтіндерден және құжаттардан презентациялар жасауға арналған құрал.",
     video: "https://www.youtube.com/embed/_qMkMSW7t9c",
   },
-  {
-    img: canvaImg,
-    url: "https://www.canva.com/",
-    name: "Canva",
-    description:
-      "Canva — графикалық дизайн жасауға арналған онлайн-платформа, түрлі шаблондар мен құралдарды ұсынады.",
-    video: "https://www.youtube.com/embed/FHNt7hdOzsk",
-  },
+
   {
     img: slidesaiImg,
     url: "https://www.slidesai.io/ru",
@@ -166,6 +175,21 @@ const cards = [
     description:
       "Runway — жасанды интеллект көмегімен мәтіннен, бейнемазмұннан және суреттерден бейнемазмұн жасау құралы.",
     video: "https://www.youtube.com/embed/c60q6DfY2HQ?si=EYXIcH5u6zJsNJBr",
+  },
+];
+
+const cardGroups = [
+  {
+    title: "Сабақ дайындауға арналған құралдар",
+    cards: cards.slice(0, 4),
+  },
+  {
+    title: "Презентация жасауға арналған құралдар",
+    cards: cards.slice(4, 8),
+  },
+  {
+    title: "Бейнемазмұн жасауға арналған құралдар",
+    cards: cards.slice(8, 12),
   },
 ];
 </script>

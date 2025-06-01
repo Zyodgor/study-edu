@@ -42,21 +42,21 @@
         @include media(970){
             grid-template-columns: repeat(3, 210px);
         }
-        @include media(720){
-            height: 350px;
-            overflow: hidden;
-            transition: height 1s;
-            &.active{
-                height: max-content;
-            }
-        }
+        // @include media(720){
+        //     height: 350px;
+        //     overflow: hidden;
+        //     transition: height 1s;
+        //     &.active{
+        //         height: max-content;
+        //     }
+        // }
         @include media(700){
             grid-template-columns: repeat(2, 210px);
-            height: 710px;
+            // height: 710px;
         }
         @include media(480){
             grid-template-columns: repeat(1, 210px);
-            height: 1080px;
+            // height: 1080px;
         }
         &-more{
             text-align: center;
@@ -153,5 +153,15 @@
         color: white;
         text-decoration: underline;
         max-width: 280px;
+    }
+    &__group-title{
+        text-align: center;
+        color: white;
+        max-width: 300px;
+        margin: 25px auto 10px;
+        font-size: 24px;
+        @include media(530){
+            font-size: 21px;
+        }
     }
 }
