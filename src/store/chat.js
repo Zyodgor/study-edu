@@ -39,7 +39,7 @@ export default {
         const response = await axios.post("/api/openai", {
           model: "gpt-4-turbo",
           messages: messagesForRequest,
-          max_tokens: 500,
+          max_tokens: 2048,
           temperature: 0.7,
         });
 
